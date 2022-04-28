@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 //让spring可以扫描到它
 @Configuration
 //扫包，将此包下的接口生成代理实现类，并且注册到spring容器中
-@MapperScan("com.mszlu.blog.dao.mapper")
+@MapperScan("com.master2334.blog.dao.mapper")
 public class MybatisPlusConfig {
 
     //分页插件
