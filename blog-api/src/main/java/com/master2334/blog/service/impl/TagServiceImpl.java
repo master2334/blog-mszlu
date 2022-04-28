@@ -3,13 +3,17 @@ package com.master2334.blog.service.impl;
 import com.master2334.blog.dao.mapper.TagMapper;
 import com.master2334.blog.dao.pojo.Tag;
 import com.master2334.blog.service.TagService;
+import com.master2334.blog.vo.Result;
 import com.master2334.blog.vo.TagVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -29,6 +33,17 @@ public class TagServiceImpl implements TagService {
         //mybatisplus无法进行多表查询
         List<Tag> tags = tagMapper.findTagsByArticleId(articleId);
         return copyList(tags);
+    }
+
+    @Override
+    public Result hots(int limit) {
+        List<Long> tagIDs = tagMapper.findHotsTagIDs(limit);
+        if(CollectionUtils.isEmpty(tagIDs)){
+            return Result.success(Collections.emptyList());
+        }
+
+        List<Tag> tagList =  tagMapper.findTagsByTagIDs(tagIDs);
+        return Result.success(tagList);
     }
 
     private List<TagVo> copyList(List<Tag> tagList) {

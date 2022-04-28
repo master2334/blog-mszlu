@@ -15,4 +15,17 @@
         select  id,avatar,tag_name as tagName from ms_tag
         where id in (select tag_id from ms_article_tag where article_id=#{articleId})
     </select>
+
+    <select id="findHotsTagIDs" parameterType="int" resultType="java.lang.Long">
+        SELECT  tag_id FROM `ms_article_tag` GROUP BY tag_id ORDER BY count(*) DESC limit #{limit}
+    </select>
+
+    <select id="findTagsByTagIDs" parameterType="list" resultType="com.master2334.blog.dao.pojo.Tag">
+        SELECT  id, tag_name as tagName FROM `ms_tag`
+        WHERE id IN 
+        <foreach collection="tagIDs" item="tagID" separator="," open="(" close=")">
+            #{tagID}
+        </foreach>
+    </select>
+
 </mapper>
