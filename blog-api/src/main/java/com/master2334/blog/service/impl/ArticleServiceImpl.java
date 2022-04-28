@@ -3,6 +3,7 @@ package com.master2334.blog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.master2334.blog.dao.dos.Archives;
 import com.master2334.blog.dao.mapper.ArticleMapper;
 import com.master2334.blog.dao.pojo.Article;
 import com.master2334.blog.service.*;
@@ -91,5 +92,23 @@ public class ArticleServiceImpl implements ArticleService {
         List<Article> articles = articleMapper.selectList(queryWrapper);
 
         return Result.success(copyList(articles, false, false));
+    }
+
+    @Override
+    public Result newArticle(int limit) {
+        LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper<>();;
+        queryWrapper.orderByDesc(Article::getCategoryId);
+        queryWrapper.select(Article::getId, Article::getTitle);
+        queryWrapper.last("limit "+limit);
+        List<Article> articles = articleMapper.selectList(queryWrapper);
+
+        return Result.success(copyList(articles, false, false));
+    }
+
+    @Override
+    public Result listArchives() {
+        List<Archives> archivesList = articleMapper.listArchives();
+
+        return Result.success(archivesList);
     }
 }

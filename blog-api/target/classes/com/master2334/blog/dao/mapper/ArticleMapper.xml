@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--MyBatis配置文件-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.master2334.blog.dao.mapper.ArticleMapper">
+
+    <!--        List<Tag> findTagsByArticleId(Long articleId);
+    在这个文件中，id代表方法名，parameterType表示输入变量的类型，resultType表示泛型的类型-->
+
+    <select id="listArchives" parameterType="long" resultType="com.master2334.blog.dao.dos.Archives">
+        SELECT year(create_date) as year,month(create_date) as month , count(*) as count from ms_article group by year, month
+    </select>
+
+</mapper>
+
+

@@ -1,4 +1,4 @@
-package com.master2334.blog.dao;
+package com.master2334.blog.dao.dos;
 
 import lombok.Data;
 
