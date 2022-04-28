@@ -3,16 +3,10 @@ package com.master2334.blog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.master2334.blog.dao.Archives;
 import com.master2334.blog.dao.mapper.ArticleMapper;
-import com.master2334.blog.dao.mapper.TagMapper;
 import com.master2334.blog.dao.pojo.Article;
-import com.master2334.blog.dao.pojo.ArticleBody;
-import com.master2334.blog.dao.pojo.Category;
 import com.master2334.blog.service.*;
-import com.master2334.blog.vo.ArticleBodyVo;
 import com.master2334.blog.vo.ArticleVo;
-import com.master2334.blog.vo.CategoryVo;
 import com.master2334.blog.vo.Result;
 import com.master2334.blog.vo.params.PageParams;
 import org.joda.time.DateTime;
@@ -21,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,11 +22,11 @@ import java.util.List;
 public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleMapper articleMapper;
-//    @Autowired
-//    private TagService tagService;
+    @Autowired
+    private TagService tagService;
 //
-//    @Autowired
-//    private SysUserService sysUserService;
+    @Autowired
+    private SysUserService sysUserService;
 
     @Override
     public Result listArticle(PageParams pageParams) {
@@ -68,18 +61,18 @@ public class ArticleServiceImpl implements ArticleService {
         ArticleVo articleVo = new ArticleVo();
         //BeanUtils.copyProperties用法   https://blog.csdn.net/Mr_linjw/article/details/50236279
         BeanUtils.copyProperties(article, articleVo);
-//        articleVo.setCreateDate(new DateTime(article.getCreateDate()).toString("yyyy-MM-dd HH:mm"));
-//        //并不是所有的接口都需要标签和作者信息
-//        if(isTag){
-//            Long articleId = article.getId();
-//            articleVo.setTags(tagService.findTagsByArticleId(articleId));
-//        }
-//        if (isAuthor) {
-//            //拿到作者id
-//            Long authorId = article.getAuthorId();
-//
-//            articleVo.setAuthor(sysUserService.findUserById(authorId).getNickname());
-//        }
+        articleVo.setCreateDate(new DateTime(article.getCreateDate()).toString("yyyy-MM-dd HH:mm"));
+        //并不是所有的接口都需要标签和作者信息
+        if(isTag){
+            Long articleId = article.getId();
+            articleVo.setTags(tagService.findTagsByArticleId(articleId));
+        }
+        if (isAuthor) {
+            //拿到作者id
+            Long authorId = article.getAuthorId();
+
+            articleVo.setAuthor(sysUserService.findUserById(authorId).getNickname());
+        }
         return articleVo;
 
     }
