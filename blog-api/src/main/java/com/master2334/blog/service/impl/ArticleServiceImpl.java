@@ -81,4 +81,15 @@ public class ArticleServiceImpl implements ArticleService {
     public List<ArticleVo> listArticlesPage(PageParams pageParams) {
         return null;
     }
+
+    @Override
+    public Result hotArticle(int limit) {
+        LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper<>();;
+        queryWrapper.orderByDesc(Article::getViewCounts);
+        queryWrapper.select(Article::getId, Article::getTitle);
+        queryWrapper.last("limit "+limit);
+        List<Article> articles = articleMapper.selectList(queryWrapper);
+
+        return Result.success(copyList(articles, false, false));
+    }
 }

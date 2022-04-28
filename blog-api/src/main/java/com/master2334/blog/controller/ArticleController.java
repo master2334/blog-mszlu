@@ -23,6 +23,12 @@ public class ArticleController {
         return articleService.listArticle(pageParams);
     }
 
+    @PostMapping("hot")
+    public Result hotArticle(){
+        int limit = 5;
+        return articleService.hotArticle(limit);
+    }
+
 
 }
 
