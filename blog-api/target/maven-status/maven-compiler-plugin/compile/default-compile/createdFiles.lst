@@ -5,6 +5,7 @@ com\master2334\blog\vo\Result.class
 com\master2334\blog\service\impl\ArticleServiceImpl.class
 com\master2334\blog\vo\ArticleBodyVo.class
 com\master2334\blog\service\LoginService.class
+com\master2334\blog\controller\RegisterController.class
 com\master2334\blog\vo\TagVo.class
 com\master2334\blog\controller\ArticleController.class
 com\master2334\blog\vo\params\LoginParam.class
