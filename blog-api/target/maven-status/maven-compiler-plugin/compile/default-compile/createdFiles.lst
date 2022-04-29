@@ -21,11 +21,13 @@ com\master2334\blog\dao\pojo\Article.class
 com\master2334\blog\vo\ArticleVo.class
 com\master2334\blog\dao\mapper\TagMapper.class
 com\master2334\blog\service\impl\SysUserServiceImpl.class
+com\master2334\blog\vo\LoginUserVo.class
 com\master2334\blog\service\ThreadService.class
 com\master2334\blog\service\SysUserService.class
 com\master2334\blog\utils\JWTUtils.class
 com\master2334\blog\service\UserService.class
 com\master2334\blog\dao\mapper\SysUserMapper.class
+com\master2334\blog\controller\UserController.class
 com\master2334\blog\service\impl\TagServiceImpl.class
 com\master2334\blog\vo\UserVo.class
 com\master2334\blog\dao\pojo\Category.class
@@ -33,4 +35,5 @@ com\master2334\blog\handler\AllExceptionHandler.class
 com\master2334\blog\vo\CategoryVo.class
 com\master2334\blog\BlogApp.class
 com\master2334\blog\config\MybatisPlusConfig.class
+com\master2334\blog\controller\LogOutController.class
 com\master2334\blog\dao\mapper\ArticleMapper.class

@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 //Spring 自动扫描组件// https://blog.csdn.net/u010002184/article/details/72870065
 // @Component – 指示自动扫描组件。
@@ -58,6 +59,33 @@ public class LoginServiceImpl implements LoginService {
         //redisTemplate用法  https://blog.csdn.net/lydms/article/details/105224210
         redisTemplate.opsForValue().set("TOKEN_"+token, JSON.toJSONString(sysUser),100, TimeUnit.DAYS);
         return Result.success(token);
+    }
+
+    @Override
+    public SysUser checkToken(String token) {
+        //token为空返回null
+        if(StringUtils.isBlank(token)){
+            return null;
+        }
+        Map<String, Object> stringObjectMap = JWTUtils.checkToken(token);
+        //解析失败
+        if(stringObjectMap ==null){
+            return null;
+        }
+        //如果成功
+        String userJson =  redisTemplate.opsForValue().get("TOKEN_"+token);
+        if (StringUtils.isBlank(userJson)) {
+            return null;
+        }
+        //解析回sysUser对象
+        SysUser sysUser = JSON.parseObject(userJson, SysUser.class);
+        return sysUser;
+    }
+
+    @Override
+    public Result logout(String token) {
+        redisTemplate.delete("TOKEN_"+token);
+        return Result.success("null");
     }
 
     //生成我们想要的密码，放于数据库用于登陆

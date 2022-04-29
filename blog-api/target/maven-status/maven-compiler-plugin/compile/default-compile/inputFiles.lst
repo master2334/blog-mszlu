@@ -4,6 +4,7 @@ D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\Erro
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\LoginController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\config\WebMVCConfig.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\params\PageParams.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\UserController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\mapper\ArticleMapper.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\ArticleBodyVo.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\mapper\SysUserMapper.java
@@ -22,6 +23,7 @@ D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\config\
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\ArticleBody.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\Category.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\SysUser.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\LoginUserVo.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\utils\JWTUtils.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\service\ArticleService.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\service\impl\TagServiceImpl.java
