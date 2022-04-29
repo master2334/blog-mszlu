@@ -3,10 +3,13 @@ D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\handler
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\ErrorCode.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\LoginController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\config\WebMVCConfig.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\handler\LoginInterceptor.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\params\PageParams.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\UserController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\mapper\ArticleMapper.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\LogOutController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\ArticleBodyVo.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\RegisterController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\mapper\SysUserMapper.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\service\impl\ArticleServiceImpl.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\service\UserService.java
@@ -15,6 +18,7 @@ D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\map
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\ArticleVo.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\CategoryVo.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\ArticleController.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\controller\TestController.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\Result.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\Tag.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\Article.java
