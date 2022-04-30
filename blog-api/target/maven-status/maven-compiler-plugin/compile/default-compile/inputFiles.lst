@@ -28,6 +28,7 @@ D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\poj
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\Category.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\dao\pojo\SysUser.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\vo\LoginUserVo.java
+D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\utils\UserThreadLocal.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\utils\JWTUtils.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\service\ArticleService.java
 D:\master2334-java\blog-mszlu\blog-api\src\main\java\com\master2334\blog\service\impl\TagServiceImpl.java
