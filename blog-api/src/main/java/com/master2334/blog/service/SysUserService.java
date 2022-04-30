@@ -15,4 +15,6 @@ public interface SysUserService {
     SysUser findUserByAccount(String account);
 
     void save(SysUser sysUser);
+
+    UserVo findUserVoById(Long id);
 }

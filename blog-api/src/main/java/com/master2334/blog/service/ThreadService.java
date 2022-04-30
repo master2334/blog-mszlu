@@ -17,7 +17,7 @@ public class ThreadService {
     @Async("taskExecutor")//在config.ThreadPoolConfig中配置
     public void updateArticleViewCount(ArticleMapper articleMapper, Article article) {
 
-        int viewCounts = article.getViewCounts();
+        Integer viewCounts = article.getViewCounts();
         Article articleUpdate = new Article();
         articleUpdate.setViewCounts(viewCounts +1);
         LambdaUpdateWrapper<Article> updateWrapper = new LambdaUpdateWrapper<>();
@@ -26,11 +26,11 @@ public class ThreadService {
         updateWrapper.eq(Article::getViewCounts,viewCounts);
         // update article set view_count=100 where view_count=99 and id=11
         articleMapper.update(articleUpdate,updateWrapper);
-//        try {
-//            Thread.sleep(5000);
-//            System.out.println("更新完成了....");
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(5000);
+            System.out.println("更新完成了....");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

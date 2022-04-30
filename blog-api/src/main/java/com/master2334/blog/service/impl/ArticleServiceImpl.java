@@ -113,6 +113,9 @@ public class ArticleServiceImpl implements ArticleService {
     @Autowired
     private ArticleBodyMapper articleBodyMapper;
 
+    @Autowired
+    private ThreadService threadService;
+
     private ArticleBodyVo findArticleBodyById(Long bodyId) {
         ArticleBody articleBody = articleBodyMapper.selectById(bodyId);
         ArticleBodyVo articleBodyVo = new ArticleBodyVo();
@@ -165,6 +168,8 @@ public class ArticleServiceImpl implements ArticleService {
 
         Article article = this.articleMapper.selectById(articleId);
         ArticleVo articleVo = copy(article, true, true, true, true);
+
+        threadService.updateArticleViewCount(articleMapper, article);
         return Result.success(articleVo);
     }
 }

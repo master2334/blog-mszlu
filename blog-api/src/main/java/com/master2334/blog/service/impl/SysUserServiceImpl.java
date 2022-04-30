@@ -8,6 +8,7 @@ import com.master2334.blog.service.SysUserService;
 import com.master2334.blog.vo.ErrorCode;
 import com.master2334.blog.vo.LoginUserVo;
 import com.master2334.blog.vo.Result;
+import com.master2334.blog.vo.UserVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -32,6 +33,7 @@ public class SysUserServiceImpl implements SysUserService {
             sysUser.setNickname("码神之路");
         }
         return sysUserMapper.selectById(id);
+
     }
 
     @Override
@@ -79,5 +81,21 @@ public class SysUserServiceImpl implements SysUserService {
         //这个地方 默认生成的id是 分布式id 雪花算法
         //mybatis-plus
         this.sysUserMapper.insert(sysUser);
+    }
+
+    @Override
+    public UserVo findUserVoById(Long id) {
+        SysUser sysUser = sysUserMapper.selectById(id);
+        if (sysUser == null){
+            sysUser = new SysUser();
+            sysUser.setId(1L);
+            sysUser.setAvatar("/static/img/logo.b3a48c0.png");
+            sysUser.setNickname("码神之路");
+        }
+        UserVo userVo = new UserVo();
+        userVo.setAvatar(sysUser.getAvatar());
+        userVo.setNickname(sysUser.getNickname());
+        userVo.setId(sysUser.getId());
+        return userVo;
     }
 }
