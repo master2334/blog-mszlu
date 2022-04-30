@@ -3,6 +3,7 @@ com\master2334\blog\dao\pojo\SysUser.class
 com\master2334\blog\dao\pojo\Tag.class
 com\master2334\blog\service\CommentsService.class
 com\master2334\blog\dao\mapper\ArticleBodyMapper.class
+com\master2334\blog\vo\params\ArticleParam.class
 com\master2334\blog\vo\ArticleBodyVo.class
 com\master2334\blog\config\ThreadPoolConfig.class
 com\master2334\blog\dao\pojo\Comment.class
@@ -10,6 +11,7 @@ com\master2334\blog\vo\TagVo.class
 com\master2334\blog\controller\TestController.class
 com\master2334\blog\controller\ArticleController.class
 com\master2334\blog\controller\LoginController.class
+com\master2334\blog\controller\CategoryController.class
 com\master2334\blog\service\TagService.class
 com\master2334\blog\service\ArticleService.class
 com\master2334\blog\service\CategoryService.class
@@ -21,6 +23,7 @@ com\master2334\blog\vo\LoginUserVo.class
 com\master2334\blog\service\UserService.class
 com\master2334\blog\dao\mapper\SysUserMapper.class
 com\master2334\blog\controller\UserController.class
+com\master2334\blog\dao\pojo\ArticleTag.class
 com\master2334\blog\vo\UserVo.class
 com\master2334\blog\dao\pojo\Category.class
 com\master2334\blog\handler\AllExceptionHandler.class
@@ -37,6 +40,7 @@ com\master2334\blog\vo\CommentVo.class
 com\master2334\blog\vo\params\LoginParam.class
 com\master2334\blog\controller\TagsController.class
 com\master2334\blog\dao\dos\Archives.class
+com\master2334\blog\vo\params\ArticleBodyParam.class
 com\master2334\blog\handler\LoginInterceptor.class
 com\master2334\blog\controller\CommentsController.class
 com\master2334\blog\dao\pojo\ArticleBody.class
@@ -45,6 +49,7 @@ com\master2334\blog\service\impl\LoginServiceImpl.class
 com\master2334\blog\vo\params\CommentParam.class
 com\master2334\blog\dao\mapper\TagMapper.class
 com\master2334\blog\service\impl\SysUserServiceImpl.class
+com\master2334\blog\dao\mapper\ArticleTagMapper.class
 com\master2334\blog\service\ThreadService.class
 com\master2334\blog\dao\mapper\CommentMapper.class
 com\master2334\blog\service\SysUserService.class

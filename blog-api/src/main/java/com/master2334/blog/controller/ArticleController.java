@@ -3,6 +3,7 @@ package com.master2334.blog.controller;
 import com.master2334.blog.service.ArticleService;
 import com.master2334.blog.vo.ArticleVo;
 import com.master2334.blog.vo.Result;
+import com.master2334.blog.vo.params.ArticleParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.master2334.blog.vo.params.PageParams;
@@ -43,6 +44,11 @@ public class ArticleController {
     @PostMapping("view/{id}")
     public Result findArticleById(@PathVariable("id") Long articleId){
         return articleService.findArticleById(articleId);
+    }
+
+    @PostMapping("publish")
+    public Result publish(@RequestBody ArticleParam articleParam){
+        return articleService.publish(articleParam);
     }
 }
 
