@@ -1,5 +1,6 @@
 package com.master2334.blog.controller;
 
+import com.master2334.blog.common.aop.LogAnnotation;
 import com.master2334.blog.service.ArticleService;
 import com.master2334.blog.vo.ArticleVo;
 import com.master2334.blog.vo.Result;
@@ -20,6 +21,7 @@ public class ArticleController {
     private ArticleService articleService;
     //Result是统一结果返回
     @PostMapping
+    @LogAnnotation(module = "文章",operation = "获取文章列表")
     public Result listArticle(@RequestBody PageParams pageParams){
         return articleService.listArticle(pageParams);
     }

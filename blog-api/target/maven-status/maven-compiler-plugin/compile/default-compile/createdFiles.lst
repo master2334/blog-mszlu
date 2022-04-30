@@ -32,18 +32,21 @@ com\master2334\blog\controller\LogOutController.class
 com\master2334\blog\dao\mapper\ArticleMapper.class
 com\master2334\blog\dao\mapper\CategoryMapper.class
 com\master2334\blog\config\WebMVCConfig.class
+com\master2334\blog\common\aop\LogAnnotation.class
 com\master2334\blog\vo\Result.class
 com\master2334\blog\service\impl\ArticleServiceImpl.class
 com\master2334\blog\service\LoginService.class
 com\master2334\blog\controller\RegisterController.class
 com\master2334\blog\vo\CommentVo.class
 com\master2334\blog\vo\params\LoginParam.class
+com\master2334\blog\utils\HttpContextUtils.class
 com\master2334\blog\controller\TagsController.class
 com\master2334\blog\dao\dos\Archives.class
 com\master2334\blog\vo\params\ArticleBodyParam.class
 com\master2334\blog\handler\LoginInterceptor.class
 com\master2334\blog\controller\CommentsController.class
 com\master2334\blog\dao\pojo\ArticleBody.class
+com\master2334\blog\common\aop\LogAspect.class
 com\master2334\blog\service\impl\CategoryServiceImpl.class
 com\master2334\blog\service\impl\LoginServiceImpl.class
 com\master2334\blog\vo\params\CommentParam.class
@@ -57,4 +60,5 @@ com\master2334\blog\utils\JWTUtils.class
 com\master2334\blog\service\impl\TagServiceImpl.class
 com\master2334\blog\vo\CategoryVo.class
 com\master2334\blog\config\MybatisPlusConfig.class
+com\master2334\blog\utils\IpUtils.class
 com\master2334\blog\utils\UserThreadLocal.class
