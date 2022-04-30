@@ -42,6 +42,7 @@ com\master2334\blog\controller\CommentsController.class
 com\master2334\blog\dao\pojo\ArticleBody.class
 com\master2334\blog\service\impl\CategoryServiceImpl.class
 com\master2334\blog\service\impl\LoginServiceImpl.class
+com\master2334\blog\vo\params\CommentParam.class
 com\master2334\blog\dao\mapper\TagMapper.class
 com\master2334\blog\service\impl\SysUserServiceImpl.class
 com\master2334\blog\service\ThreadService.class
