@@ -32,6 +32,7 @@ com\master2334\blog\controller\LogOutController.class
 com\master2334\blog\dao\mapper\ArticleMapper.class
 com\master2334\blog\dao\mapper\CategoryMapper.class
 com\master2334\blog\config\WebMVCConfig.class
+com\master2334\blog\controller\UploadController.class
 com\master2334\blog\common\aop\LogAnnotation.class
 com\master2334\blog\vo\Result.class
 com\master2334\blog\service\impl\ArticleServiceImpl.class
@@ -58,6 +59,7 @@ com\master2334\blog\dao\mapper\CommentMapper.class
 com\master2334\blog\service\SysUserService.class
 com\master2334\blog\utils\JWTUtils.class
 com\master2334\blog\service\impl\TagServiceImpl.class
+com\master2334\blog\utils\QiniuUtils.class
 com\master2334\blog\vo\CategoryVo.class
 com\master2334\blog\config\MybatisPlusConfig.class
 com\master2334\blog\utils\IpUtils.class
