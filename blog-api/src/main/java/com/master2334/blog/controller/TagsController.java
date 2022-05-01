@@ -4,6 +4,7 @@ import com.master2334.blog.service.TagService;
 import com.master2334.blog.vo.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,5 +30,15 @@ public class TagsController {
          * @return
          */
         return tagService.findAll();
+    }
+
+    @GetMapping("detail")
+    public Result findAllDetail(){
+        return tagService.findAllDetail();
+    }
+
+    @GetMapping("detail/{id}")
+    public Result findAllDetailById(@PathVariable("id") Long id){
+        return tagService.findAllDetailById(id);
     }
 }
